@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --bg:      #F7F5FF;
+  --ink:     #12012E;
+  --coral:   #FF4757;
+  --sky:     #2563EB;
+  --mint:    #059669;
+  --amber:   #F59E0B;
+  --violet:  #7C3AED;
+  --card:    #FFFFFF;
+  --border:  #E8E4F3;
+  --muted:   #7B6F92;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Sans SC', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+input, select, textarea { font-size: 16px; }
+
+.pb-safe       { padding-bottom: env(safe-area-inset-bottom); }
+.fixed-bottom-safe { padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }
+
+/* ── Background texture ── */
+.bg-noise::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat; background-size: 200px;
+}
+
+/* ── Tier colors ── */
+.tier-冲 { background: #FFF1F0; color: #FF4757; border-color: #FFCDD0; }
+.tier-稳 { background: #EFF6FF; color: #2563EB; border-color: #BFDBFE; }
+.tier-保 { background: #ECFDF5; color: #059669; border-color: #A7F3D0; }
+.tier-active-冲 { background: #FF4757; color: #fff; border-color: #FF4757; }
+.tier-active-稳 { background: #2563EB; color: #fff; border-color: #2563EB; }
+.tier-active-保 { background: #059669; color: #fff; border-color: #059669; }
+
+/* ── Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(3deg); }
+  66%       { transform: translateY(-6px) rotate(-2deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.animate-float       { animation: float 6s ease-in-out infinite; }
+.animate-float-slow  { animation: float 9s ease-in-out infinite reverse; }
+.animate-fade-up     { animation: fadeUp 0.5s ease both; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+  background-size: 200%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Card styles ── */
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(18,1,46,0.06);
+}
+.card-glow {
+  box-shadow: 0 4px 24px rgba(124,58,237,0.15), 0 2px 8px rgba(18,1,46,0.08);
+}
+
+/* ── Tag pill ── */
+.tag-985  { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+.tag-211  { background: #FFFBEB; color: #D97706; border: 1px solid #FDE68A; }
+.tag-dfc  { background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; }
+.tag-volatile { background: #FFF7ED; color: #EA580C; border: 1px solid #FED7AA; }
+
+/* ── Active scale ── */
+.press { transition: transform 0.1s; }
+.press:active { transform: scale(0.97); }

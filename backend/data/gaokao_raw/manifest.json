@@ -1,0 +1,332 @@
+[
+  {
+    "file": "云南_文科.xlsx",
+    "province": "云南",
+    "subject_type": "文科"
+  },
+  {
+    "file": "云南_理科.xlsx",
+    "province": "云南",
+    "subject_type": "理科"
+  },
+  {
+    "file": "内蒙古_文科.xlsx",
+    "province": "内蒙古",
+    "subject_type": "文科"
+  },
+  {
+    "file": "内蒙古_理科.xlsx",
+    "province": "内蒙古",
+    "subject_type": "理科"
+  },
+  {
+    "file": "北京_文科.xlsx",
+    "province": "北京",
+    "subject_type": "文科"
+  },
+  {
+    "file": "北京_理科.xlsx",
+    "province": "北京",
+    "subject_type": "理科"
+  },
+  {
+    "file": "台湾_文科.xlsx",
+    "province": "台湾",
+    "subject_type": "文科"
+  },
+  {
+    "file": "台湾_理科.xlsx",
+    "province": "台湾",
+    "subject_type": "理科"
+  },
+  {
+    "file": "吉林_文科.xlsx",
+    "province": "吉林",
+    "subject_type": "文科"
+  },
+  {
+    "file": "吉林_理科.xlsx",
+    "province": "吉林",
+    "subject_type": "理科"
+  },
+  {
+    "file": "四川_文科.xlsx",
+    "province": "四川",
+    "subject_type": "文科"
+  },
+  {
+    "file": "四川_理科.xlsx",
+    "province": "四川",
+    "subject_type": "理科"
+  },
+  {
+    "file": "天津_文科.xlsx",
+    "province": "天津",
+    "subject_type": "文科"
+  },
+  {
+    "file": "天津_理科.xlsx",
+    "province": "天津",
+    "subject_type": "理科"
+  },
+  {
+    "file": "宁夏_文科.xlsx",
+    "province": "宁夏",
+    "subject_type": "文科"
+  },
+  {
+    "file": "宁夏_理科.xlsx",
+    "province": "宁夏",
+    "subject_type": "理科"
+  },
+  {
+    "file": "安徽_文科.xlsx",
+    "province": "安徽",
+    "subject_type": "文科"
+  },
+  {
+    "file": "安徽_理科.xlsx",
+    "province": "安徽",
+    "subject_type": "理科"
+  },
+  {
+    "file": "山东_文科.xlsx",
+    "province": "山东",
+    "subject_type": "文科"
+  },
+  {
+    "file": "山东_文科.xlsx",
+    "province": "山东",
+    "subject_type": "文科"
+  },
+  {
+    "file": "山东_理科.xlsx",
+    "province": "山东",
+    "subject_type": "理科"
+  },
+  {
+    "file": "山西_文科.xlsx",
+    "province": "山西",
+    "subject_type": "文科"
+  },
+  {
+    "file": "山西_理科.xlsx",
+    "province": "山西",
+    "subject_type": "理科"
+  },
+  {
+    "file": "广东_文科.xlsx",
+    "province": "广东",
+    "subject_type": "文科"
+  },
+  {
+    "file": "广东_理科.xlsx",
+    "province": "广东",
+    "subject_type": "理科"
+  },
+  {
+    "file": "广西_文科.xlsx",
+    "province": "广西",
+    "subject_type": "文科"
+  },
+  {
+    "file": "广西_理科.xlsx",
+    "province": "广西",
+    "subject_type": "理科"
+  },
+  {
+    "file": "新疆_文科.xlsx",
+    "province": "新疆",
+    "subject_type": "文科"
+  },
+  {
+    "file": "新疆_理科.xlsx",
+    "province": "新疆",
+    "subject_type": "理科"
+  },
+  {
+    "file": "江苏_文科.xlsx",
+    "province": "江苏",
+    "subject_type": "文科"
+  },
+  {
+    "file": "江苏_理科.xlsx",
+    "province": "江苏",
+    "subject_type": "理科"
+  },
+  {
+    "file": "江西_文科.xlsx",
+    "province": "江西",
+    "subject_type": "文科"
+  },
+  {
+    "file": "江西_理科.xlsx",
+    "province": "江西",
+    "subject_type": "理科"
+  },
+  {
+    "file": "河北_文科.xlsx",
+    "province": "河北",
+    "subject_type": "文科"
+  },
+  {
+    "file": "河北_理科.xlsx",
+    "province": "河北",
+    "subject_type": "理科"
+  },
+  {
+    "file": "河北_理科.xlsx",
+    "province": "河北",
+    "subject_type": "理科"
+  },
+  {
+    "file": "河南_文科.xlsx",
+    "province": "河南",
+    "subject_type": "文科"
+  },
+  {
+    "file": "河南_理科.xlsx",
+    "province": "河南",
+    "subject_type": "理科"
+  },
+  {
+    "file": "海南_文科.xlsx",
+    "province": "海南",
+    "subject_type": "文科"
+  },
+  {
+    "file": "海南_理科.xlsx",
+    "province": "海南",
+    "subject_type": "理科"
+  },
+  {
+    "file": "湖北_文科.xlsx",
+    "province": "湖北",
+    "subject_type": "文科"
+  },
+  {
+    "file": "湖北_理科.xlsx",
+    "province": "湖北",
+    "subject_type": "理科"
+  },
+  {
+    "file": "湖南_文科.xlsx",
+    "province": "湖南",
+    "subject_type": "文科"
+  },
+  {
+    "file": "湖南_理科.xlsx",
+    "province": "湖南",
+    "subject_type": "理科"
+  },
+  {
+    "file": "澳门_文科.xlsx",
+    "province": "澳门",
+    "subject_type": "文科"
+  },
+  {
+    "file": "澳门_理科.xlsx",
+    "province": "澳门",
+    "subject_type": "理科"
+  },
+  {
+    "file": "甘肃_文科.xlsx",
+    "province": "甘肃",
+    "subject_type": "文科"
+  },
+  {
+    "file": "甘肃_理科.xlsx",
+    "province": "甘肃",
+    "subject_type": "理科"
+  },
+  {
+    "file": "福建_文科.xlsx",
+    "province": "福建",
+    "subject_type": "文科"
+  },
+  {
+    "file": "福建_理科.xlsx",
+    "province": "福建",
+    "subject_type": "理科"
+  },
+  {
+    "file": "西藏_文科.xlsx",
+    "province": "西藏",
+    "subject_type": "文科"
+  },
+  {
+    "file": "西藏_理科.xlsx",
+    "province": "西藏",
+    "subject_type": "理科"
+  },
+  {
+    "file": "贵州_文科.xlsx",
+    "province": "贵州",
+    "subject_type": "文科"
+  },
+  {
+    "file": "贵州_理科.xlsx",
+    "province": "贵州",
+    "subject_type": "理科"
+  },
+  {
+    "file": "辽宁_文科.xlsx",
+    "province": "辽宁",
+    "subject_type": "文科"
+  },
+  {
+    "file": "辽宁_理科.xlsx",
+    "province": "辽宁",
+    "subject_type": "理科"
+  },
+  {
+    "file": "重庆_文科.xlsx",
+    "province": "重庆",
+    "subject_type": "文科"
+  },
+  {
+    "file": "重庆_理科.xlsx",
+    "province": "重庆",
+    "subject_type": "理科"
+  },
+  {
+    "file": "陕西_文科.xlsx",
+    "province": "陕西",
+    "subject_type": "文科"
+  },
+  {
+    "file": "陕西_理科.xlsx",
+    "province": "陕西",
+    "subject_type": "理科"
+  },
+  {
+    "file": "青海_文科.xlsx",
+    "province": "青海",
+    "subject_type": "文科"
+  },
+  {
+    "file": "青海_理科.xlsx",
+    "province": "青海",
+    "subject_type": "理科"
+  },
+  {
+    "file": "香港_文科.xlsx",
+    "province": "香港",
+    "subject_type": "文科"
+  },
+  {
+    "file": "香港_理科.xlsx",
+    "province": "香港",
+    "subject_type": "理科"
+  },
+  {
+    "file": "黑龙江_文科.xlsx",
+    "province": "黑龙江",
+    "subject_type": "文科"
+  },
+  {
+    "file": "黑龙江_理科.xlsx",
+    "province": "黑龙江",
+    "subject_type": "理科"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "appid": "填写你的抖音小程序AppID",
+  "projectname": "AI志愿师",
+  "description": "AI驱动的高考志愿填报助手，MBTI+Holland测评+张雪峰风格顾问",
+  "miniprogramRoot": "dist/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

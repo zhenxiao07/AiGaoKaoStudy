@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["es7", "dom", "dom.iterable", "esnext.asynciterable"],
+    "allowJs": false,
+    "typeRoots": ["node_modules/@types", "node_modules/@tarojs/components/types"]
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "dist"]
+}
