@@ -6,12 +6,30 @@ from data.xuefeng_kb import XUEFENG_KNOWLEDGE
 from data.universities import UNIVERSITIES
 from data.mappings import EMPLOYMENT_SCORE
 
-client = OpenAI(
-    api_key=os.environ.get("ZHIPU_API_KEY", ""),
-    base_url="https://open.bigmodel.cn/api/paas/v4/",
-)
-
 MODEL = "glm-4-flash"
+_BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
+_client: OpenAI | None = None
+
+
+class MissingApiKeyError(RuntimeError):
+    pass
+
+
+def _api_key() -> str:
+    return os.environ.get("ZHIPU_API_KEY", "").strip()
+
+
+def get_client() -> OpenAI:
+    """延迟创建客户端，避免启动时因空 API Key 导致进程退出。"""
+    global _client
+    key = _api_key()
+    if not key:
+        raise MissingApiKeyError(
+            "ZHIPU_API_KEY 未配置，请在项目根目录 .env 中设置后重启服务"
+        )
+    if _client is None:
+        _client = OpenAI(api_key=key, base_url=_BASE_URL)
+    return _client
 
 
 def build_system_prompt(req: ChatRequest) -> str:
@@ -174,7 +192,7 @@ def chat(req: ChatRequest) -> str:
 
     # agentic loop
     while True:
-        response = client.chat.completions.create(
+        response = get_client().chat.completions.create(
             model=MODEL,
             messages=messages,
             tools=TOOLS,
@@ -206,7 +224,7 @@ def chat_stream(req: ChatRequest):
 
     # 处理工具调用（非流式）
     while True:
-        response = client.chat.completions.create(
+        response = get_client().chat.completions.create(
             model=MODEL,
             messages=messages,
             tools=TOOLS,
@@ -227,7 +245,7 @@ def chat_stream(req: ChatRequest):
             break
 
     # 流式输出最终回答
-    stream = client.chat.completions.create(
+    stream = get_client().chat.completions.create(
         model=MODEL,
         messages=messages,
         max_tokens=1024,

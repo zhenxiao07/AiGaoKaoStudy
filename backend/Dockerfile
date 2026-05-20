@@ -13,10 +13,9 @@ COPY . .
 
 EXPOSE 8000
 
-# 默认环境变量（docker compose / docker run -e 可覆盖）
+# 默认环境变量（密钥请通过 .env / docker-compose 注入，勿写入镜像）
 ENV PYTHONUNBUFFERED=1 \
-    ALLOWED_ORIGINS="*" \
-    ZHIPU_API_KEY="09f3e44425c3490eac39ec517fe7d0ab.eKjcGwl1MCWiqQPW"
+    ALLOWED_ORIGINS="*"
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=5 \
     CMD curl -f http://localhost:8000/health || exit 1
