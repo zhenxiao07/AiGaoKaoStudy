@@ -4,13 +4,16 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    env_file:
+      - path: .env
+        required: false
     environment:
-      ZHIPU_API_KEY: ${ZHIPU_API_KEY}
+      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
       # 允许来自 nginx 的跨域请求
-      ALLOWED_ORIGINS: "*"
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-*}
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
       retries: 5

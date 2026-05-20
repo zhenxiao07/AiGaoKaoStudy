@@ -1,4 +1,9 @@
 import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import assessment, agent, gaokao
@@ -19,6 +24,11 @@ app.add_middleware(
 app.include_router(assessment.router)
 app.include_router(agent.router)
 app.include_router(gaokao.router)
+
+
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
 
 
 @app.get("/")
