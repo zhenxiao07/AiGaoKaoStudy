@@ -5,7 +5,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     environment:
-      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
+      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-09f3e44425c3490eac39ec517fe7d0ab.eKjcGwl1MCWiqQPW}
       # 允许来自 nginx 的跨域请求
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-*}
     restart: unless-stopped
