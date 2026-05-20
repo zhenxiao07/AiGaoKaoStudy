@@ -7,13 +7,14 @@ echo "==========================================="
 
 # ── 1. 检查 .env ──────────────────────────────
 if [ ! -f .env ]; then
-    cat > .env << 'ENVEOF'
-# 智谱AI API Key
-# 获取地址：https://open.bigmodel.cn/usercenter/apikeys
-ZHIPU_API_KEY=your_zhipu_api_key_here
-ENVEOF
+    if [ -f .env.example ]; then
+        cp .env.example .env
+    else
+        echo "  [!] 缺少 .env 与 .env.example，无法继续"
+        exit 1
+    fi
     echo ""
-    echo "  [!] 已创建 .env 文件，请填入 ZHIPU_API_KEY 后重新运行："
+    echo "  [!] 已从 .env.example 创建 .env，请填入 ZHIPU_API_KEY 后重新运行："
     echo "      nano .env"
     echo ""
     exit 1
