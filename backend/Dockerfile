@@ -7,7 +7,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# 国内服务器构建可改用清华源：--build-arg PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ARG PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install --upgrade pip \
+    && pip install --no-cache-dir --default-timeout=120 \
+        -i ${PIP_INDEX_URL} -r requirements.txt
 
 COPY . .
 
